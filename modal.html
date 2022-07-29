@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Modal</title>
+</head>
+<body>
+    <ul class="main">
+        <li><a href="./index.html">button</a></li>
+        <li><a href="./menu.html">menu</a></li>
+        <li><a href="./overlay.html">overlay</a></li>
+        <li><a href="./flipcard.html">flip card</a></li>
+        <li><a class="current" href="">modal</a></li>
+    </ul>
+    <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint molestiae exercitationem culpa accusantium fugiat facere, voluptates impedit corporis distinctio! Unde sequi incidunt odit qui laudantium debitis earum! At maxime quia non, rerum illum, enim commodi voluptate dolore, autem quisquam earum corrupti sint. Perferendis molestias laborum tempora odio eos labore? Incidunt architecto quibusdam ipsum expedita maiores? Minus commodi architecto, expedita fugit, pariatur quo sit non mollitia soluta odio quae iusto, iste eveniet at numquam quaerat. Pariatur mollitia inventore voluptatem, quia ex reprehenderit fuga consectetur est excepturi soluta placeat debitis expedita odio voluptates omnis! Harum totam iste natus exercitationem consequatur eveniet illum necessitatibus deleniti praesentium! Asperiores ratione eius voluptate rem, laboriosam numquam earum? Suscipit doloremque, modi autem deserunt voluptate illum nemo mollitia molestiae dignissimos voluptatibus nulla adipisci sed at quaerat ex. Maxime cumque architecto repellat sunt, enim nemo dolore, esse iure aliquid modi tenetur minima, soluta est magnam. Quas quasi quos minus odit, id repudiandae cupiditate aperiam! Provident, debitis explicabo. Ab alias reiciendis deserunt impedit commodi ducimus error, similique adipisci quae, voluptas sed? Eos inventore id repellat vitae quis vel odit est velit quia aliquid numquam consequatur voluptates ea officia quaerat voluptatum, dolore non recusandae voluptatem qui sed. At cupiditate exercitationem iste?</p>
+    <button data-open-modal href="" class="modal">Open Modal window</button>
+    <p class="modal-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, doloribus nisi culpa beatae qui debitis perferendis est nesciunt explicabo officiis magni unde natus quidem quia eius. Facere quibusdam commodi, quis adipisci quam est earum officiis natus provident dolores enim ipsa repellendus, reiciendis voluptatibus aliquam tempore corrupti voluptas. Atque repellendus iusto excepturi accusamus nisi laudantium possimus non maxime ut est unde illum, dolor incidunt dignissimos optio nam alias rem fuga facere harum ducimus? Dignissimos aperiam pariatur asperiores veritatis. Modi ipsa quas nihil nemo quo alias ullam iure sequi quod. Asperiores aliquam repudiandae odit similique, ducimus atque tempore voluptatem eum repellat distinctio. A assumenda sapiente animi officiis et doloribus accusamus nesciunt dolorum nihil tempora. Maiores quisquam provident, quos sequi doloremque incidunt, expedita at dignissimos aspernatur, architecto nobis perferendis veritatis unde ab! Expedita ducimus eaque ipsa totam repellendus minima nostrum beatae amet et labore! Quia repudiandae quae ad accusantium inventore autem facere fugit, libero, iusto tenetur dolorem deserunt laboriosam vero officia accusamus natus consectetur corporis quo rem, enim velit distinctio harum. In, obcaecati provident dolore corrupti unde assumenda rem placeat cupiditate impedit temporibus, voluptate perspiciatis saepe facere architecto aperiam minus possimus distinctio maxime accusamus inventore. Unde, ipsam eum. Autem provident excepturi consectetur recusandae facere quisquam voluptas corporis assumenda placeat maiores cum, quasi error atque blanditiis aperiam dolorum! Qui non aperiam molestiae quos beatae sint fugiat quo? Amet, laborum pariatur! Quis neque, maiores ullam animi dolorem sequi dicta libero. Provident, enim non voluptates quaerat nesciunt vitae, earum sapiente vero numquam beatae nostrum perspiciatis? Reprehenderit quis laborum neque! Assumenda asperiores tenetur, laborum veritatis nostrum suscipit animi qui a unde at, officiis debitis facere inventore? Ipsum repellendus porro quo asperiores impedit unde accusantium ratione! Dignissimos obcaecati ullam consectetur earum voluptate exercitationem facere, suscipit quod eum! Aspernatur cupiditate voluptate repellat vero quam ad enim deleniti voluptates laborum consectetur ipsum, qui libero eius, labore illo beatae iusto suscipit eveniet nam quis. Aliquid possimus corrupti temporibus necessitatibus quam nemo ullam, doloribus blanditiis sit ad, excepturi, nesciunt quaerat modi autem nulla repudiandae animi odit sapiente. Tenetur cumque tempora fuga enim consequatur, delectus ipsa repudiandae ipsum alias natus atque at quia sapiente magnam beatae quas maiores voluptates ratione totam eaque recusandae a! Accusamus ea natus voluptas eveniet, laborum, ex, quae non placeat nobis tempora laboriosam voluptate voluptatibus corrupti! Magnam, laudantium cumque inventore corporis nemo iste officia exercitationem at laborum doloremque ex voluptatem blanditiis veritatis dolor eaque ea! Ullam animi provident numquam.</p>
+    <div data-backdrop class="backdrop is-hidden">
+        <div class="modal__open">
+            <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo cum maxime architecto, fugit doloribus quae veniam aut dolorem velit doloremque suscipit voluptatum officia quis hic at ratione ullam quia enim, rem porro expedita dolore, ab blanditiis! Qui iusto iure quia. Repellat sunt commodi totam minus, minima hic quae, quam accusamus at similique perferendis aliquam sequi ea provident? Perspiciatis, aperiam incidunt, harum quas tempora non debitis eos est dignissimos optio corporis repellat porro laborum delectus! Nobis esse, adipisci harum dolore velit numquam! Tempora distinctio placeat blanditiis neque dolorem. Dolore nisi qui iste repellat vel ullam explicabo consequatur nesciunt id beatae!</p>
+            <button data-close-modal class="modal">Close modal window</button>
+        </div>
+    </div>
+    <script>
+            const refs = {
+                openModalBtn: document.querySelector('[data-open-modal]'),
+                closeModalBtn: document.querySelector('[data-close-modal]'),
+                backdrop: document.querySelector('[data-backdrop]'),
+            };
+
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+
+            refs.backdrop.addEventListener('click', logBackdropClick);
+
+            function toggleModal() {
+                refs.backdrop.classList.toggle('is-hidden');}
+            
+            function logBackdropClick() {
+                console.log ("click backdrop");
+            }
+    </script>
+</body>
+</html>

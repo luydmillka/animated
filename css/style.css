@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.main {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+.main a {
+  font-size: 18px;
+  color: green;
+}
+.main a.current {
+  font-size: 18px;
+  color: rgb(190, 13, 13);
+}
+.main a:hover {
+  font-size: 18px;
+  color: rgb(190, 13, 13);
+}
+ul {
+  list-style: none;
+}
+
+/* ====кнопка с свг-картинкой внури=== */
+.container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 600px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: ghostwhite;
+  outline: 1px solid blue;
+}
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  margin-right: 50px;
+  color: blue;
+  background-color: aqua;
+  border: 1px solid blue;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+}
+.icon-fire {
+  fill: currentColor;
+  margin-right: 5px;
+  transition: transform 250ms;
+}
+.icon-rocket {
+  position: absolute;
+  fill: currentColor;
+  left: 16px;
+  margin-right: 5px;
+  transform: translateY(45px);
+  transition: transform 250ms;
+}
+
+.button:hover {
+  background-color: rgb(245, 244, 182);
+}
+.button:hover .icon-fire {
+  transform: translateY(-40px);
+}
+.button:hover .icon-rocket {
+  transform: translateY(0);
+}
+
+/* ====кнопка с ::before ::after */
+.button2 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgb(36, 5, 65);
+  background-color: rgb(235, 123, 235);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid rgb(36, 5, 65);
+  border-radius: 4px;
+}
+.button2::before,
+.button2::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background-size: contain;
+  transition: opacity 250ms;
+}
+.button2::before {
+  display: inline-block;
+  background-image: url(../image/blackboard.png);
+  opacity: 1;
+}
+
+.button2::after {
+  position: absolute;
+  background-image: url(../image/eyes.png);
+  opacity: 0;
+}
+.button2:hover {
+  background-color: chocolate;
+}
+.button2:hover::before {
+  opacity: 0;
+}
+.button2:hover::after {
+  opacity: 01;
+}
+
+/* ===выпадающее меню=== */
+
+.menu {
+  /* position: relative; */
+  display: flex;
+  background-color: cadetblue;
+  padding: 10px 40px;
+}
+.menu__item {
+  position: relative;
+  margin-right: 30px;
+}
+.menu__link {
+  display: block;
+  font-size: 24px;
+  color: midnightblue;
+  text-decoration: none;
+  padding: 10px 0;
+}
+.submenu {
+  position: absolute;
+  padding: 10px;
+  background-color: rgb(173, 239, 241);
+  width: 100%;
+  left: 0px;
+  opacity: 0;
+}
+.submenu__item {
+  margin-bottom: 10px;
+}
+.submenu__link {
+  display: block;
+  color: midnightblue;
+  font-size: 18px;
+  text-decoration: none;
+}
+.menu__link:hover,
+.submenu__link:hover {
+  color: rgb(167, 84, 6);
+}
+.menu__item:hover .submenu {
+  display: block;
+  opacity: 1;
+  transition: opacity 200ms linear;
+}
+/* если transition: opacity 200ms linear; переместить в .submenu, то будет плавно появляться и павно пропадать.   */
+
+/* =====модальное окно====== */
+.modal-text {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.modal {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: blue;
+  background-color: cornflowerblue;
+  border: 1px solid blue;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal:hover {
+  background-color: blanchedalmond;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+.modal__open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-height: 300px;
+  min-height: 300px;
+  padding: 20px;
+  background-color: #fff;
+  transition: transform 250ms ease;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal__open {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* ====overlay==== */
+.card {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.card__link {
+  text-decoration: none;
+}
+.card__thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card__thumb {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.card__descriprion {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  color: black;
+  text-decoration: none;
+}
+.card__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+  background-color: rgba(127, 255, 0, 0.3);
+}
+.card__overlay p {
+  padding: 150px 50px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: yellow;
+}
+.card:hover .card__overlay {
+  transform: translateX(0);
+}
+
+/* ======flip card==== */
+.flipcard {
+  display: block;
+  width: 300px;
+  min-height: 450px;
+  margin: 0 auto;
+  border: 2px solid black;
+  text-decoration: none;
+}
+.flipcard__scene {
+  width: 300px;
+  height: 400px;
+  perspective: 600px;
+}
+.flipcard__thumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+}
+.flipcard img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flipcard__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.flipcard__face_front {
+  background: rgb(187, 180, 180);
+}
+
+.flipcard__face_back {
+  box-sizing: border-box;
+  background: rgb(187, 187, 226);
+  transform: rotateY(180deg);
+  padding: 100px 20px 20px 20px;
+  font-size: 26px;
+  text-align: center;
+  color: yellow;
+}
+.flipcard:hover .flipcard__thumb {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+.flipcard__description {
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: black;
+}
