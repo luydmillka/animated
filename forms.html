@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Forms</title>
+</head>
+<body>
+<ul class="main">
+    <li><a class="current" href="">button</a></li>
+    <li><a href="./menu.html">menu</a></li>
+    <li><a href="./overlay.html">overlay</a></li>
+    <li><a href="./modal.html">modal</a></li>
+    <li><a href="./flipcard.html">flip card</a></li>
+    <!-- <li><a href="#">rotate</a></li> -->
+    <li><a href="./forms.html">Form </a></li>
+</ul>
+<form class="form1" action="#">
+    <div class="form1-field">
+        <input class="form1-input" type="text" id="userName" name="name" placeholder=" ">
+        <label for="userName">Your Name</label>
+        <svg class="form1-icon" width="25" height="25">
+            <use href="./image/sprite.svg#icon-user"></use>
+        </svg>
+    </div>
+    <div class="form1-field">
+        <input class="form1-input" type="email" id="userEmail" name="name" placeholder=" ">
+        <label for="userEmail">Your Email</label>
+        <svg class="form1-icon" width="25" height="25">
+            <use href="./image/sprite.svg#icon-drawer"></use>
+        </svg>
+    </div>
+    <div class="form1-field">
+        <textarea class="form1-textarea" name="comment" id="userComment" placeholder=" "></textarea>
+        <label class="label-textarea" for="userComment">Leave your comment</label>
+    </div>
+    <div class="checkbox-field">
+        <input class="input-checkbox" type="checkbox" name="policy" id="userPolicy">
+        <span class="checkbox-span"></span>
+        <label for="userPolicy">I accept <a href="#"> The privacy policy</a></label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
